@@ -3,11 +3,9 @@ def binary_to_decimal(binary_str):
     Converts a binary string to its decimal equivalent.
     """
     try:
-        # Check if the input contains only 0s and 1s
         if not all(char in '01' for char in binary_str):
             raise ValueError("Input must be a valid binary string containing only 0s and 1s.")
         
-        # Convert binary string to decimal integer
         decimal_value = int(binary_str, 2)
         return decimal_value
     except ValueError as e:
