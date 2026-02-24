@@ -18,7 +18,6 @@ def main():
             break
             
         try:
-            # Remove commas if any, to parse the float properly
             income = float(user_input.replace(',', ''))
             if income < 0:
                 print("Error: Income cannot be negative. Please try again.\n")
