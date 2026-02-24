@@ -1,12 +1,9 @@
 def is_armstrong_number(num):
-    # Convert number to string to easily iterate over digits and find length
     num_str = str(num)
     num_digits = len(num_str)
     
-    # Calculate the sum of digits raised to the power of num_digits
     sum_of_powers = sum(int(digit) ** num_digits for digit in num_str)
     
-    # Check if the sum is equal to the original number
     return sum_of_powers == num
 
 def main():
