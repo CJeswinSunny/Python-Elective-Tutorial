@@ -32,14 +32,12 @@ def main():
         if string.lower() == 'quit':
             print("Exiting program...")
             break
-            
-        # Check Symmetrical
+
         if is_symmetrical(string):
             print(f"-> The string '{string}' is Symmetrical.")
         else:
             print(f"-> The string '{string}' is NOT Symmetrical.")
             
-        # Check Palindrome
         if is_palindrome(string):
             print(f"-> The string '{string}' is a Palindrome.")
         else:
