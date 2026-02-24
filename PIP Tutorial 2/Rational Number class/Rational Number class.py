@@ -3,14 +3,11 @@ class Rational:
         if denominator == 0:
             raise ValueError("Denominator cannot be zero.")
             
-        # Determine the overall sign
         sign = -1 if (numerator < 0) ^ (denominator < 0) else 1
         
-        # Work with absolute values
         num = abs(numerator)
         den = abs(denominator)
         
-        # Reduce fraction using Euclid's Algorithm
         common_divisor = self._gcd(num, den)
         
         self.numerator = sign * (num // common_divisor)
@@ -59,7 +56,6 @@ class Rational:
 
     def __eq__(self, other):
         if isinstance(other, Rational):
-            # Direct comparison works because both are reduced upon initialization
             return self.numerator == other.numerator and self.denominator == other.denominator
         return NotImplemented
 
@@ -75,13 +71,11 @@ class Rational:
 
 
 if __name__ == "__main__":
-    # Get user input for first rational number
     print("Enter the first rational number:")
     num1 = int(input("Numerator: "))
     den1 = int(input("Denominator: "))
     r1 = Rational(num1, den1)
 
-    # Get user input for second rational number
     print("\nEnter the second rational number:")
     num2 = int(input("Numerator: "))
     den2 = int(input("Denominator: "))
