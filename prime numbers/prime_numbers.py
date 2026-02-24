@@ -25,7 +25,6 @@ def is_prime(num):
     return True
 
 def print_prime_numbers_in_range(m, n):
-    # Swap m and n if m is greater than n
     if m > n:
         m, n = n, m
     
@@ -36,7 +35,7 @@ def print_prime_numbers_in_range(m, n):
             print(num, end=" ")
             found_prime = True
     
-    print() # Print a newline at the end
+    print() 
     if not found_prime:
         print("No prime numbers found in this range.")
 
