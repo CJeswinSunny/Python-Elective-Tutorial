@@ -1,22 +1,13 @@
 def caesar_cipher(text, shift, mode):
-    """
-    Encrypts or decrypts a text using Caesar Cipher.
-    """
-    result = ""
-    # Reverse the shift for decryption
     if mode == 'decrypt':
         shift = -shift
 
     for char in text:
-        # Check if character is a letter
         if char.isalpha():
-            # Determine the ASCII offset depending on uppercase or lowercase
             start = ord('a') if char.islower() else ord('A')
-            # Calculate the new character
             new_char = chr((ord(char) - start + shift) % 26 + start)
             result += new_char
         else:
-            # Leave symbols, spaces, and numbers as they are
             result += char
             
     return result
